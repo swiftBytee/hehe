@@ -15,7 +15,7 @@ if (!fs.existsSync(uploadsDir)) {
 }
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
