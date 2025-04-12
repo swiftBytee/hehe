@@ -1,6 +1,6 @@
 const express = require("express");
 const Customer = require("../models/customer.model");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const Cart = require("../models/cart.model");
 const Product = require("../models/product.model");
