@@ -80,7 +80,7 @@ router.post("/login", async (req, res) => {
     res
       .status(200)
       .cookie("adminToken", token, {
-        secure: process.env.NODE_ENV === "Production", // Ensure this is set when using SameSite=None
+        secure: true, // Ensure this is set when using SameSite=None
         sameSite: "Lax",
         maxAge: 3600000, // 1 hour
         path: "/", // Available to all routes
