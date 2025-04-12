@@ -1,0 +1,44 @@
+[
+    {
+      "_id": "67a114a5a0201d1bf8687c38",
+      "name": "Dairy Fusion",
+      "description": "Veggies with a touch of dairy delight.",
+      "price": 6490,
+      "priceForOne": 4500,
+      "priceForTwo": 6490,
+      "priceForThree": 8500,
+      "bgColor": "#ffb524",
+      "image": "uploads\\1738609829131-Result.jpg",
+      "createdAt": "2025-02-03T19:10:29.163Z",
+      "updatedAt": "2025-02-03T19:10:29.163Z",
+      "__v": 0
+    },
+    {
+      "_id": "67a3a0535245d409f3dcf388",
+      "name": "Green Basket",
+      "description": "A Vegetable focused selection.",
+      "price": 5990,
+      "priceForOne": 4490,
+      "priceForTwo": 5990,
+      "priceForThree": 7988,
+      "bgColor": "#81c408",
+      "image": "uploads\\1738776659517-dp.jpg",
+      "createdAt": "2025-02-05T17:30:59.540Z",
+      "updatedAt": "2025-02-05T17:30:59.540Z",
+      "__v": 0
+    },
+    {
+      "_id": "67a3a4165245d409f3dcf394",
+      "name": "Meat Medley",
+      "description": "A blend of veggies with non-vegetarian options.",
+      "price": 7490,
+      "priceForOne": 5490,
+      "priceForTwo": 7490,
+      "priceForThree": 9490,
+      "bgColor": "#dc3545",
+      "image": "uploads\\1738777622811-Bengali.jpeg",
+      "createdAt": "2025-02-05T17:47:02.902Z",
+      "updatedAt": "2025-02-05T17:47:02.902Z",
+      "__v": 0
+    }
+  ]
