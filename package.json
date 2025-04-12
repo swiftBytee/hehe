@@ -1,14 +1,17 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend server for project",
   "main": "index.js",
-"scripts": {
-  "start": "node index.js", 
-  "build": "echo 'no build step'"
-},
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'no build step'"
+  },
   "author": "Mehebub",
   "license": "ISC",
+  "engines": {
+    "node": "18.19.0"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
