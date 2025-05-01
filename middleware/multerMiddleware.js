@@ -1,7 +1,9 @@
-const multer = require("multer");
-const cloudinary = require("cloudinary").v2;
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
-require("dotenv").config(); // Load env variables
+import multer from "multer";
+import { v2 as cloudinary } from "cloudinary";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import dotenv from "dotenv";
+
+dotenv.config(); // Load env variables
 
 // Cloudinary Configuration
 cloudinary.config({
@@ -22,4 +24,4 @@ const storage = new CloudinaryStorage({
 
 const upload = multer({ storage });
 
-module.exports = upload;
+export default upload;

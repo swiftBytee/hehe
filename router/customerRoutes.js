@@ -1,11 +1,11 @@
-const express = require("express");
-const Customer = require("../models/customer.model");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const Cart = require("../models/cart.model");
-const Product = require("../models/product.model");
-const Order = require("../models/order.model");
-const mongoose = require("mongoose");
+import express from "express";
+import Customer from "../models/customer.model.js";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import Cart from "../models/cart.model.js";
+import Product from "../models/product.model.js";
+import Order from "../models/order.model.js";
+import mongoose from "mongoose";
 
 const router = express.Router();
 const hashKey = 8;
@@ -274,4 +274,4 @@ router.get("/order", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

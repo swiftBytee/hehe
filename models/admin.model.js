@@ -1,4 +1,6 @@
-const { mongoose, Schema } = require("mongoose");
+import mongoose from "mongoose";
+
+const { Schema } = mongoose;
 
 const adminSchema = new Schema({
   fullName: {
@@ -21,4 +23,4 @@ const adminSchema = new Schema({
 
 const Admin = mongoose.model("Admin", adminSchema);
 
-module.exports = Admin;
+export default Admin;

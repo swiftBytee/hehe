@@ -1,8 +1,7 @@
-const express = require("express");
-const Product = require("../models/product.model");
-const { default: Package } = require("../models/package.model");
-const Cart = require("../models/cart.model");
-const Category = require("../models/category.model");
+import express from "express";
+import Product from "../models/product.model.js";
+import Package from "../models/package.model.js";
+
 const router = express.Router();
 
 router.get("/view-products", async (req, res) => {
@@ -17,4 +16,4 @@ router.get("/view-package", async (req, res) => {
   res.status(201).json(packages);
 });
 
-module.exports = router;
+export default router;

@@ -1,15 +1,16 @@
-const express = require("express");
+import express from "express";
+import bcrypt from "bcryptjs";
+import dotenv from "dotenv";
+import jwt from "jsonwebtoken";
+import Admin from "../models/admin.model.js";
+import Category from "../models/category.model.js";
+import uploadSingle from "../middleware/multerMiddleware.js";
+import Product from "../models/product.model.js";
+import upload from "../middleware/multerMiddleware.js";
+import Package from "../models/package.model.js";
+import Order from "../models/order.model.js";
+
 const router = express.Router();
-const bcrypt = require("bcryptjs");
-const dotenv = require("dotenv");
-const jwt = require("jsonwebtoken");
-const Admin = require("../models/admin.model");
-const Category = require("../models/category.model");
-const { uploadSingle } = require("../middleware/multerMiddleware");
-const Product = require("../models/product.model");
-const upload = require("../middleware/multerMiddleware");
-const { default: Package } = require("../models/package.model");
-const Order = require("../models/order.model");
 
 const hashKey = 8;
 
@@ -356,4 +357,4 @@ router.get("/orders", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

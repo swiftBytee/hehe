@@ -1,15 +1,22 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const connectDB = require("./Config/dbConnect");
-const adminRouter = require("./router/adminRoutes");
-const homeRouter = require("./router/homeRoutes");
-const customerRouter = require("./router/customerRoutes");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
-const fs = require("fs");
-const path = require("path");
+import express from "express";
+import mongoose from "mongoose";
+import connectDB from "./Config/dbConnect.js";
+import adminRouter from "./router/adminRoutes.js";
+import homeRouter from "./router/homeRoutes.js";
+import customerRouter from "./router/customerRoutes.js";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import fs from "fs";
+import path from "path";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
 
-const uploadsDir = path.join(__dirname, "uploads");
+// Use this to get __dirname equivalent in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Create uploads directory if it doesn't exist
+const uploadsDir = join(__dirname, "uploads");
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir);
 }
@@ -18,7 +25,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/uploads", express.static(join(__dirname, "uploads")));
 
 app.use(cookieParser());
 
