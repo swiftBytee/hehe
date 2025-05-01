@@ -72,9 +72,9 @@ router.post("/login", async (req, res) => {
     res
       .status(200)
       .cookie("customerToken", token, {
-        httpOnly: true, // Prevents access via JavaScript
-        secure: process.env.NODE_ENV === "production", // Enable only in production
-        sameSite: "Lax",
+        httpOnly: true,
+        secure: true, // Always true in production
+        sameSite: "None", // ✅ Required for cross-site cookie sharing
         maxAge: 1000 * 60 * 60, // 1 hour
         path: "/",
       })
